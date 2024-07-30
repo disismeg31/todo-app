@@ -2,37 +2,10 @@
 import React from "react";
 import { AiOutlineEdit } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
-function ToDos({ tasks, setTasks, setNewTask, setUpdate, setEdit }) {
-  function deleteTask(id) {
-    const isConfirm = window.confirm("areyou sure you want to remove it")
-    if(isConfirm){
-      const upatedTasks = tasks.filter((item) => id !== item.id);
-      setTasks(upatedTasks);
-    }  
-  }
+import { useToDoContext } from "./ToDoContext/ToDoContext";
+function ToDos() {
 
-  function editTask(id) {
-    const findItem = tasks.find((task) => {
-      return id === task.id;
-    });
-    setNewTask(findItem);
-    setUpdate(false);
-    setEdit(id);
-    console.log(findItem);
-  }
-
-  function handleRemoveAll(){
-    setTasks([])
-  }
-
-  function handleComplete(id){
-    setTasks(tasks.map((compItem)=>{
-      if(compItem.id == id){
-        return {...compItem, complete:!compItem.complete}
-      }
-      return compItem;
-    }))
-  }
+  const {tasks,deleteTask,editTask,handleRemoveAll,handleComplete} = useToDoContext()
 
   return (
     <div className="todos">
@@ -51,7 +24,7 @@ function ToDos({ tasks, setTasks, setNewTask, setUpdate, setEdit }) {
             >
               <div className="flex gap-3 items-center">
                 <span className="flex items-center">
-                  <input className="h-4 w-4" type="checkbox" onClick={()=>handleComplete(task.id)}/>
+                  <input className='h-4 w-4' type="checkbox" checked={task.complete} onChange={()=>handleComplete(task.id)}/>
                 </span>
                 <span className={`${task.complete?'line-through':""} `}>{task.title}</span>
               </div>
@@ -85,6 +58,3 @@ function ToDos({ tasks, setTasks, setNewTask, setUpdate, setEdit }) {
 }
 
 export default ToDos;
-
-// low :bg-[#bae777], high :bg-[#fa828c] , medium : bg-[#fff281] - priority
-// edit and delete

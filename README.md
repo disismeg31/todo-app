@@ -1,8 +1,48 @@
-# React + Vite
+## TODO app React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a TODO app built using React, leveraging Context API and localStorage for state management and data persistence.
 
-Currently, two official plugins are available:
+### Main Concepts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Conditional Rendering**: Display different UI elements based on the application's state.
+- **Destructuring**: Extract values from arrays or objects into distinct variables.
+- **Functional Programming**: Utilize methods like `map`, `filter`, and `find` to handle data.
+- **useContext**: Manage global state across the application.
+- **useState**: Handle component-level state.
+- **useEffect**: Manage side effects such as data fetching and subscriptions.
+
+### UI
+
+- **Tailwind CSS**: For styling the application.
+- **React Icons**: For adding icons to the UI.
+
+### Other Packages
+
+- **uuid**: For generating unique IDs for tasks.
+
+### Built with
+
+- [React](https://reactjs.org/) - JS library
+- [Vite](https://vitejs.dev/guide/) - build tool
+- [TailwindCss](https://tailwindcss.com/docs/) - For styling
+
+### Usage
+
+- add tasks using the input field and manage task priorities using dropdown menu (High,Medum,Low)
+- edit and delete tasks as needed
+
+### Screenshort
+
+![ToDo App Screenshort](./src/assets/todoapp_screenshort.png)
+ 
+### What I learned
+
+- How to use Context api for global state management 
+- A better understanding of conditional rendering 
+- How to use useEffect for handling side effects ie in this case local storage and a better understanding of local storage
+- Better undestanding of functional programming, destructuring, 
+
+### Links
+
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
