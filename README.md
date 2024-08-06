@@ -40,7 +40,7 @@ This is a TODO app built using React, leveraging Context API and localStorage fo
 - How to use Context api for global state management 
 - A better understanding of conditional rendering 
 - How to use useEffect for handling side effects ie in this case local storage and a better understanding of local storage
-- Better undestanding of functional programming, destructuring, 
+- A better undestanding of functional programming, destructuring, 
 
 ### Links
 
